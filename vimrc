@@ -275,6 +275,11 @@ let g:NERDTreeWinSize = 40
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
+"Toggle paste mode with <F-6> key
+nnoremap <F6> :set invpaste paste?<CR>
+set pastetoggle=<F6>
+set showmode
+
 "Map <F5> to trim trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 

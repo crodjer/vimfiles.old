@@ -269,6 +269,12 @@ let Tlist_Show_One_File = 1
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
 
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+"Map <F5> to trim trailing whitespace
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 "explorer mappings
 nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
@@ -302,6 +308,10 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
+"Function to maximise the vim editor window. To be called in gvimrc
+function Maximize_Window()
+  silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry

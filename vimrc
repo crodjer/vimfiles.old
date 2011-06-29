@@ -40,8 +40,16 @@ endif
 "default indent settings
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set expandtab
 set autoindent
+set smartindent
+
+
+"set after parenthesis indents to use only single indentation
+let g:pyindent_open_paren = '&sw'
+let g:pyindent_continue = '&sw'
+set cinoptions+=+1
 
 "folding settings
 set foldmethod=indent   "fold based on indent

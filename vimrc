@@ -281,11 +281,16 @@ let g:NERDTreeWinSize = 40
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
+"Toggle paste mode with <F-6> key
+nnoremap <F6> :set invpaste paste?<CR>
+
+
 "Toggle search highlight
 nnoremap <F7> :set hlsearch!<CR>
 
-"Toggle paste mode with <F-6> key
-nnoremap <F6> :set invpaste paste?<CR>
+"Toggle gundo graph
+nnoremap <F8> :GundoToggle<CR>
+
 set pastetoggle=<F6>
 set showmode
 

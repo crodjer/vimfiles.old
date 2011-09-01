@@ -286,7 +286,7 @@ nnoremap <F6> :set invpaste paste?<CR>
 
 
 "Toggle search highlight
-nnoremap <F7> :set hlsearch!<CR>
+nnoremap <F7> :set spell spelllang=en_us<CR>
 
 "Toggle gundo graph
 nnoremap <F8> :GundoToggle<CR>

@@ -16,7 +16,7 @@ set history=1000
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
-set number      "show line numbers
+set rnu         "show line numbers
 
 "display tabs and trailing spaces
 set list
@@ -43,7 +43,6 @@ set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
-
 
 let g:pyindent_open_paren = '&sw'
 let g:pyindent_continue = '&sw'
@@ -75,6 +74,9 @@ syntax on
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
+
+"disable vim swapfiles
+set noswapfile
 
 "tell the term has 256 colors
 set t_Co=256
@@ -329,11 +331,6 @@ function! s:VSetSearch()
 endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
-
-"Function to maximise the vim editor window. To be called in gvimrc
-function Maximize_Window()
-  silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
-endfunction
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry

@@ -37,6 +37,9 @@ if v:version >= 703
     set colorcolumn=+1 "mark the ideal max text width
 endif
 
+set colorcolumn=79
+colo zenburn
+
 "default indent settings
 set shiftwidth=4
 set softtabstop=4

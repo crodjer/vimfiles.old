@@ -91,3 +91,6 @@
 [submodule "bundle/vim-session"]
 	path = bundle/vim-session
 	url = https://github.com/xolox/vim-session.git
+[submodule "bundle/haskell-syntax"]
+	path = bundle/haskell-syntax
+	url = https://github.com/vim-scripts/haskell.vim.git

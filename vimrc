@@ -38,7 +38,8 @@ if v:version >= 703
 endif
 
 set colorcolumn=79
-colo zenburn
+set background=dark
+"colo zenburn
 
 "default indent settings
 set shiftwidth=4
@@ -319,6 +320,9 @@ endif
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
+"Dont move lines starting by '#' to the first column.
+:inoremap # X<BS>#
+
 "map Q to something useful
 noremap Q gq
 
@@ -361,3 +365,5 @@ autocmd BufReadPost fugitive://*
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
+"load solarized theme after being loaded by pathogen
+colo solarized

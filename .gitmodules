@@ -94,3 +94,6 @@
 [submodule "bundle/haskell-syntax"]
 	path = bundle/haskell-syntax
 	url = https://github.com/vim-scripts/haskell.vim.git
+[submodule "bundle/vim-web-indent"]
+	path = bundle/vim-web-indent
+	url = https://github.com/garbas/vim-web-indent
